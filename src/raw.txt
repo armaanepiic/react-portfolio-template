@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nusratun Nabi – UI/UX Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .section-title { font-family: 'Poppins', sans-serif; }
+    .gradient-text {
+      background: linear-gradient(90deg, #7e5bef, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Hero background */
+    .hero-bg {
+      background: url('https://i.pinimg.com/originals/7f/7b/1d/7f7b1da79dfdcc3cd54fa92a3dd3f328.png') center/cover no-repeat;
+      position: relative;
+    }
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3); /* Reduced opacity */
+    }
+    /* Project Card Hover */
+    .project-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <header class="w-full px-6 py-4 flex justify-between items-center border-b bg-gradient-to-r from-purple-100 to-purple-50 relative z-10">
+    <h1 class="text-xl font-bold gradient-text">Nusratun Nabi</h1>
+    <nav class="space-x-4 text-sm font-medium">
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#projects" class="hover:underline">Projects</a>
+      <a href="#resume" class="hover:underline">Resume</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+      <a href="https://drive.google.com/file/d/1D0jq5yiAQTp0llBCcRudw8ng7J3CNnGp/view?usp=sharing" target="_blank" class="border px-4 py-2 rounded bg-purple-600 text-white hover:bg-purple-700 transition">Download CV</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg min-h-screen flex flex-col justify-center items-center px-6 text-center relative text-white">
+    <div class="relative z-10">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">I Design Clarity.</h2>
+      <p class="text-lg sm:text-xl md:text-2xl mb-4">UI/UX Designer & UX Researcher based in Bangladesh</p>
+      <p class="text-base italic mb-6">Designing with purpose. Building with empathy.</p>
+      <div class="flex space-x-4 justify-center">
+        <a href="#projects" class="px-6 py-3 border border-white rounded hover:bg-white hover:text-purple-700 transition">View Projects</a>
+        <a href="#contact" class="px-6 py-3 bg-purple-600 text-white rounded hover:bg-purple-700 transition">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="px-6 py-20">
+    <h2 class="text-3xl font-bold text-center mb-12 gradient-text">How I Help You</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 border rounded-lg hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">UX Research</h3>
+        <p class="text-gray-600">User interviews, journey mapping, usability testing and research synthesis.</p>
+      </div>
+      <div class="p-6 border rounded-lg hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">UI Design</h3>
+        <p class="text-gray-600">High fidelity design systems, mobile/web UI and visual storytelling.</p>
+      </div>
+      <div class="p-6 border rounded-lg hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Dashboards & Systems</h3>
+        <p class="text-gray-600">Complex interface design with clarity, for scalable products and data-driven tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="px-6 py-20 bg-purple-50">
+    <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Beyond the Interface</h2>
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="w-full md:w-1/2">
+        <img src="https://i.pinimg.com/originals/14/62/6e/14626ea5ba8753c802288b536a667b0e.jpg" alt="Designer Cartoon" class="w-full rounded-lg shadow-lg" />
+      </div>
+      <div class="w-full md:w-1/2 text-gray-700">
+        <p class="mb-4">I'm a UI/UX designer with a CSE background. My work blends aesthetics with usability, backed by real user insights.</p>
+        <p class="mb-4">I’ve worked across healthcare, smart home, travel, and e-commerce platforms. My focus is always user clarity, efficiency, and modern design systems.</p>
+        <p class="text-sm text-gray-500">Tools: Figma, Miro, Canva, HTML/CSS, Webflow</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section id="projects" class="px-6 py-20 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Proof Over Promises</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+      <!-- SynCare -->
+      <div class="project-card bg-white p-6 border rounded-lg">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/27b9b2188965451.65d860a6e4d8c.jpg" class="mb-4 rounded w-full" alt="SynCare" />
+        <h3 class="text-xl font-semibold">SynCare – Healthcare App</h3>
+        <a href="https://www.behance.net/gallery/188965451/Healthcare-and-Online-Consultancy-(SynCare)" target="_blank" class="mt-2 inline-block text-sm underline text-purple-600">View Case Study</a>
+      </div>
+
+      <!-- QMS Dashboard -->
+      <div class="project-card bg-white p-6 border rounded-lg">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7621e7225300431.675e5aee6d393.jpg" class="mb-4 rounded w-full" alt="QMS Dashboard" />
+        <h3 class="text-xl font-semibold">QMS Dashboard</h3>
+        <a href="https://www.behance.net/gallery/225300431/QMS-(Quality-Management-System)-Dashboard-Design" target="_blank" class="mt-2 inline-block text-sm underline text-purple-600">View Case Study</a>
+      </div>
+
+      <!-- SmartNest -->
+      <div class="project-card bg-white p-6 border rounded-lg">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d61e0f228783939.675e69f65a9d8.jpg" class="mb-4 rounded w-full" alt="SmartNest" />
+        <h3 class="text-xl font-semibold">SmartNest – Smart Home</h3>
+        <a href="https://www.behance.net/gallery/228783939/Smart-Home-Control-Mobile-App-UI-Design" target="_blank" class="mt-2 inline-block text-sm underline text-purple-600">View Case Study</a>
+      </div>
+
+      <!-- Mooncart -->
+      <div class="project-card bg-white p-6 border rounded-lg">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/b14b8f214952851.673c8a6f1e947.jpg" class="mb-4 rounded w-full" alt="Mooncart" />
+        <h3 class="text-xl font-semibold">Mooncart – E-commerce</h3>
+        <a href="https://www.behance.net/gallery/228758371/E-commerce-Landing-Page-Design" target="_blank" class="mt-2 inline-block text-sm underline text-purple-600">View Case Study</a>
+      </div>
+
+      <!-- Green Lifestyle -->
+      <div class="project-card bg-white p-6 border rounded-lg">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9d8de7231209285.675e6e919ce57.jpg" class="mb-4 rounded w-full" alt="Green Lifestyle" />
+        <h3 class="text-xl font-semibold">Green Lifestyle Services</h3>
+        <a href="https://www.behance.net/gallery/231209285/Green-lifestyle-services" target="_blank" class="mt-2 inline-block text-sm underline text-purple-600">View Case Study</a>
+      </div>
+
+      <!-- Catalog Design -->
+      <div class="project-card bg-white p-6 border rounded-lg">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/bd4b6d228746757.675e729b23f0d.jpg" class="mb-4 rounded w-full" alt="Catalog Design" />
+        <h3 class="text-xl font-semibold">Catalog Design</h3>
+        <a href="https://www.behance.net/gallery/228746757/Catalog-design" target="_blank" class="mt-2 inline-block text-sm underline text-purple-600">View Case Study</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="px-6 py-20 bg-gradient-to-r from-purple-50 to-white text-center">
+    <h2 class="text-3xl font-bold mb-6 gradient-text">My Resume</h2>
+    <p class="text-gray-600 max-w-xl mx-auto mb-6">Download my latest CV to see my detailed work experience, skills, and projects.</p>
+    <a href="https://drive.google.com/file/d/1D0jq5yiAQTp0llBCcRudw8ng7J3CNnGp/view?usp=sharing" target="_blank" class="px-8 py-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">📄 Download CV</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="px-6 py-20">
+    <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Let’s Build Something Meaningful</h2>
+    <div class="max-w-xl mx-auto">
+      <form class="space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full border border-gray-300 p-4 rounded" />
+        <input type="email" placeholder="Your Email" class="w-full border border-gray-300 p-4 rounded" />
+        <textarea placeholder="Your Message" class="w-full border border-gray-300 p-4 rounded h-32"></textarea>
+        <button class="w-full px-4 py-3 bg-purple-600 text-white rounded hover:bg-purple-700 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-600 border-t bg-purple-50">
+    <p>© 2025 Nusratun Nabi — Built with purpose & clarity</p>
+    <div class="mt-4 flex justify-center space-x-4 text-sm">
+      <a href="https://linkedin.com/in/nusratun-nabi-a295131b4" target="_blank" class="hover:underline">LinkedIn</a>
+      <a href="https://behance.net/nusratunnabi" target="_blank" class="hover:underline">Behance</a>
+      <a href="mailto:nusraat.uiux@gmail.com" class="hover:underline">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>
