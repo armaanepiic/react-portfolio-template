@@ -3,8 +3,8 @@ import useTheme from "../hooks/useTheme";
 import { useNavigate } from "react-router";
 
 export default function Sidebar() {
-  const navigate = useNavigate();
   const { theme } = useTheme();
+  const navigate = useNavigate();
   const menuItems = ["Dashboard", "Profile", "Settings", "Help"];
   const menuItem = menuItems.map((item, index) => (
     <li key={index}>

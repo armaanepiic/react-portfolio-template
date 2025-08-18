@@ -1,26 +1,28 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 
 import About from "../pages/About";
-import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
 import RootLayout from "../pages/RootLayout";
-import Dashboard from "../pages/Dashboard";
-import Profile from "../pages/Profile";
+import Services from "../pages/Services";
+import Projects from "../pages/Projects";
+import Resume from "../pages/Resume";
+import Contact from "../pages/Contact";
+import Hero from "../pages/Hero";
 
 export default function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="profile/:profileId" element={<Profile />} />
-          <Route path="settings" element={<h1>Settings</h1>} />
-          <Route path="help" element={<h1>Help</h1>} />
+          <Route index element={<Hero />} />
+          <Route path="hero" element={<Hero />} />
+          <Route path="services" element={<Services />} />
+          <Route path="about" element={<About />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="contact" element={<Contact />} />
+
         </Route>
-        <Route path="about" element={<About />} />
-        <Route path="login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
