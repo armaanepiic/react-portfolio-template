@@ -7,7 +7,7 @@ import MinimalistMultiDevice from "./Minimalist Neutral Multi Device Computer Mo
 import MinimalistWebsiteLaunch from "./Minimalist Website Launch Computer Mockup Instagram Post.png";
 import PresentationSlideBehance from "./Presentation Slide Behance Main.png";
 import PurplePinkGradient from "./Purple Pink Gradient Mobile Application Presentation.png";
-import ReactSvg from "./react.svg";
+
 
 // Assets array
 export const assets = [
@@ -19,7 +19,7 @@ export const assets = [
   { name: "Minimalist Website Launch", image: MinimalistWebsiteLaunch },
   { name: "Presentation Slide Behance", image: PresentationSlideBehance },
   { name: "Purple Pink Gradient", image: PurplePinkGradient },
-  { name: "React SVG", image: ReactSvg },
+
 ];
 
 // Export individual assets
@@ -32,5 +32,4 @@ export {
   MinimalistWebsiteLaunch,
   PresentationSlideBehance,
   PurplePinkGradient,
-  ReactSvg,
 };
