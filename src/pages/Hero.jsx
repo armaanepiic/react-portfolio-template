@@ -16,13 +16,23 @@ export default function Hero() {
       )}
     >
       <div className="relative z-10 max-w-4xl mx-auto ">
-        <h1 className={clsx("text-4xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent", theme === 'light' && "bg-gradient-to-r from-gray-500 to-gray-900", theme === 'dark' && "text-white")}>
+        <h1
+          className={clsx(
+            "text-4xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent",
+            theme === "light" && "bg-gradient-to-r from-gray-500 to-gray-900",
+            theme === "dark" && "text-white"
+          )}
+        >
           Revolutionize Your <br />
-          <span className={clsx(
-            "bg-clip-text text-transparent",
-            theme === "light" && "bg-gradient-to-r from-purple-600 to-orange-600",
-            theme === "dark" && "bg-gradient-to-r from-red-400 via-yellow-300 to-lime-500"
-          )}>
+          <span
+            className={clsx(
+              "bg-clip-text text-transparent",
+              theme === "light" &&
+                "bg-gradient-to-r from-purple-600 to-orange-600",
+              theme === "dark" &&
+                "bg-gradient-to-r from-red-400 via-yellow-300 to-lime-500"
+            )}
+          >
             Design Experience
           </span>
         </h1>
@@ -122,7 +132,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      
     </section>
   );
 }

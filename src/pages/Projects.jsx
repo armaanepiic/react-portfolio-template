@@ -1,88 +1,122 @@
 import clsx from "clsx";
 import useTheme from "../hooks/useTheme";
+import { project } from "./project-info";
 
 export default function Projects() {
   const { theme } = useTheme();
-
-  const projects = [
-    {
-      title: "SynCare – Healthcare App",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/27b9b2188965451.65d860a6e4d8c.jpg",
-      link: "https://www.behance.net/gallery/188965451/Healthcare-and-Online-Consultancy-(SynCare)",
-    },
-    {
-      title: "QMS Dashboard",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7621e7225300431.675e5aee6d393.jpg",
-      link: "https://www.behance.net/gallery/225300431/QMS-(Quality-Management-System)-Dashboard-Design",
-    },
-    {
-      title: "SmartNest – Smart Home",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d61e0f228783939.675e69f65a9d8.jpg",
-      link: "https://www.behance.net/gallery/228783939/Smart-Home-Control-Mobile-App-UI-Design",
-    },
-    {
-      title: "Mooncart – E-commerce",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/b14b8f214952851.673c8a6f1e947.jpg",
-      link: "https://www.behance.net/gallery/228758371/E-commerce-Landing-Page-Design",
-    },
-    {
-      title: "Green Lifestyle Services",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9d8de7231209285.675e6e919ce57.jpg",
-      link: "https://www.behance.net/gallery/231209285/Green-lifestyle-services",
-    },
-    {
-      title: "Catalog Design",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/bd4b6d228746757.675e729b23f0d.jpg",
-      link: "https://www.behance.net/gallery/228746757/Catalog-design",
-    },
-  ];
 
   return (
     <section
       className={clsx(
         "px-6 py-20 min-h-screen",
-        theme === "light" && "bg-gray-100 text-gray-900",
-        theme === "dark" && "bg-gray-800 text-white"
+        theme === "light" && "bg-gray-50 text-gray-900",
+        theme === "dark" && "bg-gray-900 text-white"
       )}
     >
       <h2
         className={clsx(
-          "text-3xl font-bold text-center mb-12",
+          "text-3xl font-bold text-center mb-16",
           "bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"
         )}
       >
         Proof Over Promises
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {projects.map((project, index) => (
+      <div className="max-w-6xl mx-auto space-y-16">
+        {project.map((projectItem, index) => (
           <div
             key={index}
             className={clsx(
-              "project-card p-6 border rounded-lg transition-transform hover:transform hover:-translate-y-1.5 hover:shadow-xl",
-              theme === "light" && "bg-white border-gray-200",
-              theme === "dark" && "bg-gray-900 border-gray-600"
+              "flex flex-col lg:flex-row gap-8 lg:gap-12 items-center",
+              // Alternate layout direction for desktop
+              index % 2 === 1 && "lg:flex-row-reverse"
             )}
           >
-            <img
-              src={project.image}
-              className="mb-4 rounded w-full h-48 object-cover"
-              alt={project.title}
-            />
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-block text-sm underline text-purple-600 hover:text-purple-800"
-            >
-              View Case Study
-            </a>
+            {/* Image Side */}
+            <div className="w-full lg:w-1/2">
+              <div
+                className={clsx(
+                  "rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-105",
+                  theme === "light" && "shadow-gray-300/50",
+                  theme === "dark" && "shadow-black/50"
+                )}
+              >
+                <img
+                  src={projectItem.image}
+                  className="w-full h-64 md:h-80 lg:h-96 object-cover"
+                  alt={projectItem.title}
+                />
+              </div>
+            </div>
+
+            {/* Content Side */}
+            <div className="w-full lg:w-1/2 space-y-6">
+              <h3
+                className={clsx(
+                  "text-2xl md:text-3xl font-bold",
+                  theme === "light" && "text-gray-800",
+                  theme === "dark" && "text-white"
+                )}
+              >
+                {projectItem.title}
+              </h3>
+
+              <p
+                className={clsx(
+                  "text-base md:text-lg leading-relaxed",
+                  theme === "light" && "text-gray-600",
+                  theme === "dark" && "text-gray-300"
+                )}
+              >
+                {projectItem.description}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2">
+                {projectItem.tags.map((tag, tagIndex) => (
+                  <span
+                    key={tagIndex}
+                    className={clsx(
+                      "px-3 py-1 text-xs md:text-sm rounded-full",
+                      theme === "light" && "bg-blue-100 text-blue-600",
+                      theme === "dark" && "bg-blue-900/30 text-blue-300"
+                    )}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-4">
+                <a
+                  href={projectItem.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={clsx(
+                    "inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:translate-x-1",
+                    theme === "light" &&
+                      "bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-orange-500/25",
+                    theme === "dark" &&
+                      "bg-orange-500 hover:bg-orange-400 text-white shadow-lg hover:shadow-orange-500/25"
+                  )}
+                >
+                  EXPLORE CASE STUDY
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         ))}
       </div>

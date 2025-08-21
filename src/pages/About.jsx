@@ -12,7 +12,6 @@ export default function About() {
         theme === "dark" && "bg-gray-800 text-white"
       )}
     >
-      
       <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-16">
         <div className="max-w-xl w-full md:w-1/2">
           <img
@@ -22,16 +21,15 @@ export default function About() {
           />
         </div>
         <div className="w-full md:w-1/2 text-justify">
-
-        <h2
-        className={clsx(
-          "text-left text-5xl font-bold mb-12",
-          theme === "light" && "text-gray-900",
-          theme === "dark" && "text-white"
-        )}
-      >
-        Beyond the Interface
-      </h2>
+          <h2
+            className={clsx(
+              "text-left text-5xl font-bold mb-12",
+              theme === "light" && "text-gray-900",
+              theme === "dark" && "text-white"
+            )}
+          >
+            Beyond the Interface
+          </h2>
           <p
             className={clsx(
               "mb-4 text-lg",

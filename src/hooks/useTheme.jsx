@@ -1,7 +1,7 @@
 // custom hook for "useContext(ThemeContext)" repeatation
 
 import { useContext } from "react";
-import  ThemeContext  from "../contexts/ThemeContext";
+import ThemeContext from "../contexts/ThemeContext";
 
 export default function useTheme() {
   const themeContext = useContext(ThemeContext);

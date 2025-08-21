@@ -14,7 +14,8 @@ export default function Header() {
         }}
         className={clsx(
           "px-4 py-2 rounded-l-lg cursor-pointer hover:scale-105 font-semibold",
-          theme === "light" && "hover:bg-opacity-80 hover:bg-purple-800 transition-all duration-300 border-purple-600 hover:text-white",
+          theme === "light" &&
+            "hover:bg-opacity-80 hover:bg-purple-800 transition-all duration-300 border-purple-600 hover:text-white",
           theme === "dark" && "hover:bg-gray-50 hover:text-gray-800"
         )}
       >
