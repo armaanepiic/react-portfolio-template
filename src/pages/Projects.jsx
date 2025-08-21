@@ -13,18 +13,18 @@ export default function Projects() {
         theme === "dark" && "bg-gray-900 text-white"
       )}
     >
-      <h2
+      {/* <h2
         className={clsx(
           "text-3xl font-bold text-center mb-16",
           "bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"
         )}
       >
         Proof Over Promises
-      </h2>
-      <div className="max-w-6xl mx-auto space-y-16">
+      </h2> */}
+      <div className="max-w-6xl mx-auto space-y-16 mt-7">
         {project.map((projectItem, index) => (
           <div
-            key={index}
+            key={projectItem.id}
             className={clsx(
               "flex flex-col lg:flex-row gap-8 lg:gap-12 items-center",
               // Alternate layout direction for desktop
@@ -35,14 +35,16 @@ export default function Projects() {
             <div className="w-full lg:w-1/2">
               <div
                 className={clsx(
-                  "rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-105",
-                  theme === "light" && "shadow-gray-300/50",
-                  theme === "dark" && "shadow-black/50"
+                  "overflow-hidden shadow-2xl transition-transform hover:scale-105 border-2",
+                  theme === "light" && "inset-shadow-sm border-gray-200",
+                  theme === "dark" && "shadow-lg shadow-indigo-500/50  border-gray-300",
+                  // Apply border radius based on project ID
+                  projectItem.id % 2 === 1 ? "rounded-l-4xl" : "rounded-r-4xl"
                 )}
               >
                 <img
                   src={projectItem.image}
-                  className="w-full h-64 md:h-80 lg:h-96 object-cover"
+                  className="w-full h-64 md:h-80 lg:h-96 object-contain"
                   alt={projectItem.title}
                 />
               </div>
