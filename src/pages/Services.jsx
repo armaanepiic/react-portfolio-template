@@ -7,14 +7,14 @@ export default function Services() {
   return (
     <section
       className={clsx(
-        "px-6 py-20 min-h-screen flex flex-col md:flex-row items-center justify-center",
+        "px-6 py-20 min-h-screen flex flex-col md:flex-col items-center justify-center",
         theme === "light" && "bg-white text-gray-900",
         theme === "dark" && "bg-gray-900 text-white"
       )}
     >
       <h2
         className={clsx(
-          "text-3xl font-bold text-center mb-12",
+          "text-3xl lg:text-5xl font-bold text-center mb-12",
           "bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"
         )}
       >
@@ -72,6 +72,65 @@ export default function Services() {
           >
             Complex interface design with clarity, for scalable products and
             data-driven tools.
+          </p>
+        </div>
+        {/* New Service: Prototyping */}
+        <div
+          className={clsx(
+            "p-6 border rounded-lg hover:shadow-lg transition",
+            theme === "light" && "border-gray-200 bg-white",
+            theme === "dark" && "border-gray-600 bg-gray-800"
+          )}
+        >
+          <h3 className="text-xl font-semibold mb-2">Prototyping</h3>
+          <p
+            className={clsx(
+              theme === "light" && "text-gray-600",
+              theme === "dark" && "text-gray-300"
+            )}
+          >
+            Interactive prototypes for web and mobile, enabling rapid iteration
+            and user feedback before development.
+          </p>
+        </div>
+        {/* New Service: Design Audit */}
+        <div
+          className={clsx(
+            "p-6 border rounded-lg hover:shadow-lg transition",
+            theme === "light" && "border-gray-200 bg-white",
+            theme === "dark" && "border-gray-600 bg-gray-800"
+          )}
+        >
+          <h3 className="text-xl font-semibold mb-2">Design Audit</h3>
+          <p
+            className={clsx(
+              theme === "light" && "text-gray-600",
+              theme === "dark" && "text-gray-300"
+            )}
+          >
+            In-depth review of your product’s usability, accessibility, and
+            visual consistency to identify improvement areas.
+          </p>
+        </div>
+        {/* New Service: Branding & Visual Identity */}
+        <div
+          className={clsx(
+            "p-6 border rounded-lg hover:shadow-lg transition",
+            theme === "light" && "border-gray-200 bg-white",
+            theme === "dark" && "border-gray-600 bg-gray-800"
+          )}
+        >
+          <h3 className="text-xl font-semibold mb-2">
+            Branding & Visual Identity
+          </h3>
+          <p
+            className={clsx(
+              theme === "light" && "text-gray-600",
+              theme === "dark" && "text-gray-300"
+            )}
+          >
+            Logo design, color palettes, typography, and brand guidelines to
+            ensure a cohesive and memorable presence.
           </p>
         </div>
       </div>
