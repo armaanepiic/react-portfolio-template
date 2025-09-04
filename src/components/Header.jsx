@@ -8,7 +8,7 @@ export default function Header() {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const menuItems = ["Services", "About", "Projects", "Resume", "Contact"];
+  const menuItems = ["Services", "About", "Projects", "Experience", "Contact"];
 
   const handleNavigation = (item) => {
     navigate(`/${item.toLowerCase()}`);
