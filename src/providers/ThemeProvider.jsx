@@ -7,7 +7,7 @@ import { useSearchParams } from "react-router";
 
 // Contains the toggle logic to switch between "light" and "dark" themes
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const [searchParamas, setSearchParams] = useSearchParams();
 
   useEffect(() => {

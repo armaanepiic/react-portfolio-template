@@ -21,11 +21,14 @@ export default function Services() {
         How I Help You
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* UX Research */}
         <div
           className={clsx(
-            "p-6 border rounded-lg hover:shadow-lg transition",
-            theme === "light" && "border-gray-200 bg-white",
-            theme === "dark" && "border-gray-600 bg-gray-800"
+            "p-6 border rounded-lg transition-all duration-300",
+            "hover:scale-105 transform hover:shadow-xl",
+            theme === "light"
+              ? "border-gray-200 bg-white hover:bg-gradient-to-br hover:from-rose-50 hover:via-pink-50 hover:to-purple-100"
+              : "border-gray-600 bg-gray-800 hover:bg-gradient-to-br hover:from-rose-900/20 hover:via-pink-900/20 hover:to-purple-900/20"
           )}
         >
           <h3 className="text-xl font-semibold mb-2">UX Research</h3>
@@ -39,11 +42,15 @@ export default function Services() {
             synthesis.
           </p>
         </div>
+
+        {/* UI Design */}
         <div
           className={clsx(
-            "p-6 border rounded-lg hover:shadow-lg transition",
-            theme === "light" && "border-gray-200 bg-white",
-            theme === "dark" && "border-gray-600 bg-gray-800"
+            "p-6 border rounded-lg transition-all duration-300",
+            "hover:scale-105 transform hover:shadow-xl",
+            theme === "light"
+              ? "border-gray-200 bg-white hover:bg-gradient-to-br hover:from-purple-50 hover:via-violet-50 hover:to-indigo-100"
+              : "border-gray-600 bg-gray-800 hover:bg-gradient-to-br hover:from-purple-900/20 hover:via-violet-900/20 hover:to-indigo-900/20"
           )}
         >
           <h3 className="text-xl font-semibold mb-2">UI Design</h3>
@@ -56,11 +63,15 @@ export default function Services() {
             High fidelity design systems, mobile/web UI and visual storytelling.
           </p>
         </div>
+
+        {/* Dashboards & Systems */}
         <div
           className={clsx(
-            "p-6 border rounded-lg hover:shadow-lg transition",
-            theme === "light" && "border-gray-200 bg-white",
-            theme === "dark" && "border-gray-600 bg-gray-800"
+            "p-6 border rounded-lg transition-all duration-300",
+            "hover:scale-105 transform hover:shadow-xl",
+            theme === "light"
+              ? "border-gray-200 bg-white hover:bg-gradient-to-br hover:from-indigo-50 hover:via-blue-50 hover:to-cyan-100"
+              : "border-gray-600 bg-gray-800 hover:bg-gradient-to-br hover:from-indigo-900/20 hover:via-blue-900/20 hover:to-cyan-900/20"
           )}
         >
           <h3 className="text-xl font-semibold mb-2">Dashboards & Systems</h3>
@@ -74,12 +85,15 @@ export default function Services() {
             data-driven tools.
           </p>
         </div>
-        {/* New Service: Prototyping */}
+
+        {/* Prototyping */}
         <div
           className={clsx(
-            "p-6 border rounded-lg hover:shadow-lg transition",
-            theme === "light" && "border-gray-200 bg-white",
-            theme === "dark" && "border-gray-600 bg-gray-800"
+            "p-6 border rounded-lg transition-all duration-300",
+            "hover:scale-105 transform hover:shadow-xl",
+            theme === "light"
+              ? "border-gray-200 bg-white hover:bg-gradient-to-br hover:from-violet-50 hover:via-fuchsia-50 hover:to-pink-100"
+              : "border-gray-600 bg-gray-800 hover:bg-gradient-to-br hover:from-violet-900/20 hover:via-fuchsia-900/20 hover:to-pink-900/20"
           )}
         >
           <h3 className="text-xl font-semibold mb-2">Prototyping</h3>
@@ -93,12 +107,15 @@ export default function Services() {
             and user feedback before development.
           </p>
         </div>
-        {/* New Service: Design Audit */}
+
+        {/* Design Audit */}
         <div
           className={clsx(
-            "p-6 border rounded-lg hover:shadow-lg transition",
-            theme === "light" && "border-gray-200 bg-white",
-            theme === "dark" && "border-gray-600 bg-gray-800"
+            "p-6 border rounded-lg transition-all duration-300",
+            "hover:scale-105 transform hover:shadow-xl",
+            theme === "light"
+              ? "border-gray-200 bg-white hover:bg-gradient-to-br hover:from-blue-50 hover:via-sky-50 hover:to-indigo-100"
+              : "border-gray-600 bg-gray-800 hover:bg-gradient-to-br hover:from-blue-900/20 hover:via-sky-900/20 hover:to-indigo-900/20"
           )}
         >
           <h3 className="text-xl font-semibold mb-2">Design Audit</h3>
@@ -112,12 +129,15 @@ export default function Services() {
             visual consistency to identify improvement areas.
           </p>
         </div>
-        {/* New Service: Branding & Visual Identity */}
+
+        {/* Branding & Visual Identity */}
         <div
           className={clsx(
-            "p-6 border rounded-lg hover:shadow-lg transition",
-            theme === "light" && "border-gray-200 bg-white",
-            theme === "dark" && "border-gray-600 bg-gray-800"
+            "p-6 border rounded-lg transition-all duration-300",
+            "hover:scale-105 transform hover:shadow-xl",
+            theme === "light"
+              ? "border-gray-200 bg-white hover:bg-gradient-to-br hover:from-fuchsia-50 hover:via-purple-50 hover:to-violet-100"
+              : "border-gray-600 bg-gray-800 hover:bg-gradient-to-br hover:from-fuchsia-900/20 hover:via-purple-900/20 hover:to-violet-900/20"
           )}
         >
           <h3 className="text-xl font-semibold mb-2">

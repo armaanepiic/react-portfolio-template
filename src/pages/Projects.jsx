@@ -13,14 +13,6 @@ export default function Projects() {
         theme === "dark" && "bg-gray-900 text-white"
       )}
     >
-      {/* <h2
-        className={clsx(
-          "text-3xl font-bold text-center mb-16",
-          "bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"
-        )}
-      >
-        Proof Over Promises
-      </h2> */}
       <div className="max-w-6xl mx-auto space-y-16 mt-7">
         {project.map((projectItem, index) => (
           <div
@@ -35,17 +27,32 @@ export default function Projects() {
             <div className="w-full lg:w-1/2">
               <div
                 className={clsx(
-                  "overflow-hidden shadow-2xl transition-transform hover:scale-105 border-2",
-                  theme === "light" && "inset-shadow-sm border-gray-200",
-                  theme === "dark" && "shadow-lg shadow-indigo-500/50  border-gray-300",
-                  // Apply border radius based on project ID
-                  projectItem.id % 2 === 1 ? "rounded-l-4xl" : "rounded-r-4xl"
+                  "relative overflow-hidden transition-transform hover:scale-105",
+                  "bg-white/5 backdrop-blur-sm",
+                  "border-2 p-4 md:p-6", // Added padding
+                  theme === "light"
+                    ? "border-gray-200 shadow-xl"
+                    : "border-gray-700 shadow-purple-500/20",
+                  // Different border radius based on position
+                  projectItem.id % 2 === 1 ? "rounded-l-4xl" : "rounded-r-4xl",
+                  // Fixed aspect ratio container
+                  "aspect-[16/10]"
                 )}
               >
                 <img
                   src={projectItem.image}
-                  className="w-full h-64 md:h-80 lg:h-96 object-contain"
+                  className={clsx(
+                    "w-full h-full",
+                    "object-center transition-all duration-300",
+                    "rounded-lg", // Added rounded corners to image
+                    // Adjust object-fit based on image content
+                    projectItem.id === 4
+                      ? "object-contain p-2" // Added inner padding for contained images
+                      : "object-center p-2",
+                    "hover:scale-105"
+                  )}
                   alt={projectItem.title}
+                  loading="lazy"
                 />
               </div>
             </div>

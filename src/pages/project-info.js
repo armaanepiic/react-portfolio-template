@@ -5,6 +5,8 @@ import {
   FrameImage,
   MinimalistWebsiteLaunch,
   PurplePinkGradient,
+  PresentationSlideBehance,
+  Monocart,
 } from "../assets";
 
 export const project = [
@@ -14,7 +16,7 @@ export const project = [
     description:
       "Built for healthcare access – from appointments to prescriptions.",
     tags: ["#Healthcare", "#MobileUI", "#Figma"],
-    image: PurplePinkGradient, // Using local asset
+    image: PresentationSlideBehance, // Using local asset
     link: "https://www.behance.net/gallery/188965451/Healthcare-and-Online-Consultancy-(SynCare)",
   },
   {
@@ -32,16 +34,16 @@ export const project = [
     description:
       "Smart home control interface with intuitive device management.",
     tags: ["#SmartHome", "#IoT", "#MobileApp"],
-    image: MinimalistWebsiteLaunch, // Using local asset
+    image: PurplePinkGradient, // Using local asset
     link: "https://www.behance.net/gallery/228783939/Smart-Home-Control-Mobile-App-UI-Design",
   },
   {
     id: 4,
-    title: "Mooncart – E-commerce",
+    title: "Monocart – E-commerce",
     description:
       "Eco-friendly e-comm experience with playful visuals and filtered shopping flow.",
     tags: ["#Ecommerce", "#WebDesign", "#ComponentLibrary"],
-    image: ComputerMockupFacebook, // Using local asset
+    image: Monocart, // Updated to use mooncart image
     link: "https://www.behance.net/gallery/228758371/E-commerce-Landing-Page-Design",
   },
   {

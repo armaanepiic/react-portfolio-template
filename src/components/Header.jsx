@@ -33,13 +33,13 @@ export default function Header() {
     <header
       className={clsx(
         "p-4 border-b-2 transition-colors duration-300 fixed top-0 left-0 right-0 z-50 backdrop-blur-md",
-        theme === "light" && "bg-white/80 border-gray-200/50 text-gray-800",
+        theme === "light" && "bg-gradient-to-r from-purple-300 via-purple-200 to-blue-300 border-gray-200/50 text-gray-800",
         theme === "dark" && "bg-gray-800/80 border-gray-600/50 text-white"
       )}
     >
       <div className="flex justify-between items-center w-full mx-auto">
         <Link to="/">
-          <h1 className="text-md md:text-2xl font-bold font-['Pacifico']">Nusratun Nabi</h1>
+          <h1 className="text-md md:text-2xl font-bold font-Helvetica">Nusratun Nabi</h1>
         </Link>
 
         {/* Desktop Navigation */}
@@ -51,7 +51,8 @@ export default function Header() {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 transition-transform hover:scale-110 cursor-pointer"
+            className={clsx("border-2 px-4 py-2 rounded-md transition-transform hover:scale-110 cursor-pointer", theme === "light" && "bg-gray-800",
+                  theme === "dark" && "bg-gray-100")}
           >
             {theme === "light" ? "🌙" : "☀️"}
           </button>

@@ -9,8 +9,9 @@ export default function Hero() {
     <section
       className={clsx(
         "min-h-screen flex flex-col justify-center items-center px-6 text-center w-full h-screen",
+        "mt-16 sm:mt-0", // Added margin-top for mobile, remove for larger screens
         theme === "light" &&
-          "bg-gradient-to-br from-purple-100 via-purple-200 to-blue-100 text-gray-900",
+          "bg-gradient-to-br from-purple-200 via-purple-300 to-blue-200 text-gray-900",
         theme === "dark" &&
           "bg-gradient-to-br from-purple-900 via-purple-800 to-gray-900 text-white"
       )}
@@ -63,7 +64,7 @@ export default function Hero() {
             View Projects
           </Link>
           <Link
-            to="https://www.linkedin.com/in/nusratun-nabi-a295131b4/"
+            to="https://www.linkedin.com/in/nusratun-nabi-a295131b4/" target="_blank"
             className="px-6 py-3  text-white rounded-lg bg-purple-600 hover:bg-purple-800 transition-all duration-300 border-purple-600 font-medium border-2 "
           >
             LinkedIn
