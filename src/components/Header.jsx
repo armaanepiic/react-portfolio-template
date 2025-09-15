@@ -21,7 +21,7 @@ export default function Header() {
         onClick={() => handleNavigation(item)}
         className={clsx(
           "text-md md:text-lg px-4 py-2 rounded-lg cursor-pointer hover:scale-105 font-semibold transition-all duration-300",
-          theme === "light" && "hover:bg-purple-100 hover:text-purple-800",
+          theme === "light" && "hover:bg-purple-300 hover:text-purple-800",
           theme === "dark" && "hover:bg-gray-700 hover:text-white"
         )}
       >
@@ -32,8 +32,8 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        "p-4 border-b-2 transition-colors duration-300 fixed top-0 left-0 right-0 z-50 backdrop-blur-md",
-        theme === "light" && "bg-gradient-to-r from-purple-300 via-purple-200 to-blue-300 border-gray-200/50 text-gray-800",
+        "p-4 transition-colors duration-300 fixed top-0 left-0 right-0 z-50 backdrop-blur-md",
+        theme === "light" && "bg-purple-100 text-gray-800",
         theme === "dark" && "bg-gray-800/80 border-gray-600/50 text-white"
       )}
     >
