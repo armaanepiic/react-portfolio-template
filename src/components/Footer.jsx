@@ -1,18 +1,7 @@
-const TOOLS = ["Figma","FigJam","Framer","Maze","Principle","Zeplin","Hotjar","Lottie","Storybook","Linear","Notion","React"];
-
 export default function Footer({ scrollTo }) {
   return (
     <footer className="bg-[#07070d]">
-      <div className="overflow-hidden py-4 border-y border-white/5">
-        <div className="anim-marquee whitespace-nowrap inline-flex gap-10">
-          {[...TOOLS, ...TOOLS].map((t, i) => (
-            <span key={i} className="text-xs font-bold uppercase tracking-widest text-white/15">
-              {t} ✦
-            </span>
-          ))}
-        </div>
-      </div>
-
+    
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <button onClick={() => scrollTo("home")}

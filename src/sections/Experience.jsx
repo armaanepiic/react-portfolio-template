@@ -87,8 +87,8 @@ export default function Experience() {
           </div>
 
           {/* Timeline */}
-          <div className="relative flex-1 pl-10">
-            <div className="absolute left-4.5 top-2 bottom-2 w-0.5 tl-line rounded-full opacity-40" />
+          <div className="relative flex-1 pl-8">
+            <div className="absolute left-2.5 top-2 bottom-2 w-0.5 tl-line rounded-full opacity-30" />
 
             <div className="space-y-8">
               {EXPERIENCES.map((exp, i) => {
@@ -100,17 +100,18 @@ export default function Experience() {
                     style={{ transitionDelay: `${i * 120}ms` }}>
 
                     {/* Dot */}
-                    <div className="absolute -left-10 top-8 w-9 h-9 rounded-full flex items-center justify-center z-10
-                      glass ring-4 ring-purple-500/20 shadow-lg shadow-purple-900/30">
-                      <span className="w-2.5 h-2.5 rounded-full g-linear-to-br from-purple-500 to-indigo-500 pulse-ring" />
+                    <div className="absolute -left-8 top-8 w-6 h-6 rounded-full flex items-center justify-center z-10
+                      bg-purple-900/40 ring-2 ring-purple-400/30">
+                      <span className="w-2 h-2 rounded-full bg-purple-400 pulse-ring" />
                     </div>
+
 
                     {/* Card */}
                     <div
                       onClick={() => exp.expandedContent && toggle(exp.id)}
-                      className={`rounded-2xl p-7 glass border-white/6 hover:border-purple-500/25
+                      className={`animated-border rounded-2xl p-7 bg-[#0f0d1a]
                         transition-all duration-300
-                        ${exp.expandedContent ? "cursor-pointer hover:bg-white/6" : ""}`}>
+                        ${exp.expandedContent ? "cursor-pointer hover:bg-[#131024]" : ""}`}>
 
                       <div className="flex items-start justify-between flex-wrap gap-3 mb-4">
                         <div>
