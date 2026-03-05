@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const NAV = ["Services", "About", "Projects", "Experience", "Contact"];
+const NAV = ["About", "Services", "Projects", "Experience", "Contact"];
 
 export default function Header({ activeSection, scrollTo }) {
   const [scrolled, setScrolled] = useState(false);
