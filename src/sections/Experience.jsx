@@ -41,7 +41,7 @@ const STATS = [
   { label: "Total Experience", value: "1.5+ Yrs"   },
   { label: "Companies",        value: "2"           },
   { label: "Positions",        value: "3"           },
-  { label: "Location",         value: "Chattogram"  },
+  { label: "Location",         value: "Dhaka"  },
 ];
 
 export default function Experience() {
