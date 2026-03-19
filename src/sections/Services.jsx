@@ -33,7 +33,7 @@ export default function Services() {
             <div key={title}
               className={`group relative rounded-2xl p-7 overflow-hidden
                 bg-white/3 backdrop-blur-md border border-white/6
-                hover:border-white/12transition-all duration-500
+                hover:border-white/12transition-all duration-300
                 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{
                 transitionDelay: `${i * 80}ms`,
@@ -55,7 +55,7 @@ export default function Services() {
               <p className="text-sm leading-relaxed text-white/40">{desc}</p>
 
               {/* Bottom glow on hover */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ background: `linear-gradient(90deg, transparent, ${glow}, transparent)` }} />
             </div>
           ))}
